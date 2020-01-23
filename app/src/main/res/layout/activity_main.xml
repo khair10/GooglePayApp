@@ -6,5 +6,83 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity">
+    <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center" />
+    <ImageView
+            android:id="@+id/image_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/ic_motorcycle_black_216dp"
+    />
 
+    <TextView
+            android:id="@+id/text_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="30 RUB"
+    />
+
+    <TextView
+            android:id="@+id/text_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAllCaps="true"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorGrey"
+            tools:text="MOUNTAIN BIKE"
+    />
+
+    <TextView
+            android:id="@+id/googlepay_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:id="@+id/googlepay_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:layout_margin="16dp"
+            android:background="@drawable/googlepay_button_no_shadow_background"
+            android:padding="2sp"
+            android:contentDescription="@string/buy_with_googlepay_button_content_description">
+
+        <LinearLayout
+                android:duplicateParentState="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="fitCenter"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/buy_with_googlepay_button_content"/>
+        </LinearLayout>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:duplicateParentState="true"
+                android:src="@drawable/googlepay_button_overlay"/>
+    </RelativeLayout>
 </LinearLayout>
